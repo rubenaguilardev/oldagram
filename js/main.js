@@ -49,16 +49,29 @@ for (let i = 0; i < posts.length; i++) {
                 <img class="icon" src="images/icon-dm.png" alt="An icon for messaging the post to a user">
             </div>
 
-            <p class="likes">${posts[i].likes} likes</p>
+            <p id="likes${i}" class="likes">${posts[i].likes} likes</p>
 
             <p id="userComment"><span>${posts[i].username}</span> ${posts[i].comment}</p>
         </section>
     `    
 }
 
-let heartBtn = document.querySelectorAll(`.heart`)
+let heartBtn = document.querySelectorAll('.heart')
 
-console.log(heartBtn)
-    
-   
+for (let i = 0; i < posts.length; i++) {
+    heartBtn[i].addEventListener('click', function() {
 
+        const heartEl = document.getElementById(this.id)
+        let likeIncrease = document.getElementById(`likes${i}`)
+
+        if (heartEl.src.endsWith('images/icon-heart.png')) {
+            heartEl.src = './images/icon-red-heart.png'
+            posts[i].likes++
+            likeIncrease.textContent = `${posts[i].likes} likes`
+        } else if (heartEl.src.endsWith('images/icon-red-heart.png')) {
+            heartEl.src = './images/icon-heart.png'
+            posts[i].likes--
+            likeIncrease.textContent = `${posts[i].likes} likes`
+        }
+    })
+}
