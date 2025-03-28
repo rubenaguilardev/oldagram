@@ -1,0 +1,109 @@
+/* General styles */
+
+body {
+    font-family: 'source-sans-pro', sans-serif;
+    background-color: #ededed;
+}
+
+#main-container {
+    background-color: #ededed;
+    width: 375px;
+    margin: 0 auto;
+}
+
+.main {
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #c6c6c6;
+    background-color: #fff;
+    width: 375px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 127px;
+    height: 34px;
+}
+
+.avatar,
+#artist-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+#artist-avatar {
+    margin-right: 7px;
+}
+
+.userDetails{
+    display: flex;
+    padding: 10px 10px 11px 17px;
+}
+
+#artistName,
+.likes{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.userNameLocation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+#artistLocation {
+    font-size: 12px;
+}
+
+.image img{
+    width: 375px;
+}
+
+/* User Interaction Section */
+
+.icons {
+    margin: 18px 0 12px 10px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    opacity: .5;
+}
+
+.icon{
+    width: 23px;
+    height: 22px;
+    padding-right: 14px;
+}
+
+.likes,
+#userComment {
+    margin-left: 13px;
+}
+
+.likes {
+    margin-bottom: 12px;
+}
+
+#userComment {
+    padding-bottom: 16px;;
+    font-size: 13px;
+}
+
+#userComment span {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 4px;
+}
